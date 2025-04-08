@@ -1,7 +1,7 @@
 import { InternalServerError, MethodNotAllowedrError } from "infra/errors";
 
 function onNoMatchHandler(request, response) {
-  const publicErrorObject = new MethodNotAllowedrError
+  const publicErrorObject = new MethodNotAllowedrError();
   response.status(publicErrorObject.statusCode).json(publicErrorObject);
 }
 
@@ -17,10 +17,10 @@ function onErrorHandler(error, request, response) {
 }
 
 const controller = {
-    errorHandlers: {
-        onNoMatch: onNoMatchHandler, 
-        onError: onErrorHandler,
-      }
-}
+  errorHandlers: {
+    onNoMatch: onNoMatchHandler,
+    onError: onErrorHandler,
+  },
+};
 
-export default controller
+export default controller;
