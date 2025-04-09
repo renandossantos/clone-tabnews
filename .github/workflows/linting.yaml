@@ -43,4 +43,4 @@ jobs:
 
       - run: npm ci
 
-      - run: npx commitlint --from HEAD~5 --to HEAD --verbose
+      - run: npx commitlint --from HEAD~3 --to HEAD --verbose
